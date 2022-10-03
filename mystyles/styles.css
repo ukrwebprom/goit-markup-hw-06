@@ -695,25 +695,37 @@ background-color: var(--accent-color);
   fill:var(--title-and-nav-text-color);
   transition: fill 250ms var(--time-function);
 }
+.box {
+  width:22px;
+  height:20px;
+  margin-right:8px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
 .check {
   border: 2px solid var(--title-and-nav-text-color);
   border-radius: 2px;
   display: block;
   width:16px;
   height:15px;
-  margin-right:8px;
 }
-.agree input:checked + .check {
+.agree input:checked + .box > .check {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-image: url("../images/icon-check.svg");
   background-size: cover;
   background-origin: border-box;
 }
+.agree input:focus + .box{
+  border: 2px solid var(--title-and-nav-text-color);
+}
 .agree {
   display:flex;
   align-items: center;
   margin-bottom: 30px;
+  justify-content: center;
 }
 .agree input {
   -webkit-appearance:none;
@@ -724,6 +736,7 @@ background-color: var(--accent-color);
   display:flex;
   align-items: center;
   cursor:pointer;
+  height: 24px;
 }
 .agree label,
 .agree a {
@@ -738,6 +751,9 @@ background-color: var(--accent-color);
 .agree a {
   color:var(--accent-color);
   margin-left: 5px;
+}
+.footer-form {
+  margin: 0 0 0 auto;
 }
 .subscribe-form {
   display:flex;
